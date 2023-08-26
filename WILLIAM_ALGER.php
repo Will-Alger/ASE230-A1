@@ -128,7 +128,7 @@ $resume_items = [
 ?>
 
 <head>
-	<title><?php echo $name . "'s Resume"; ?></title>
+	<title><?= $name . "'s Resume"; ?></title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -162,16 +162,16 @@ $resume_items = [
 						<div class="row p-4 justify-content-center justify-content-md-between">
 							<div class="primary-info col-auto">
 								<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"></h1>
-								<div class="title mb-3"><?php echo $job_title ?></div>
+								<div class="title mb-3"><?= $job_title ?></div>
 								<ul class="list-unstyled">
-									<li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?php echo $email ?></a></li>
-									<li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?php echo $phone_number ?></a></li>
+									<li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?= $email ?></a></li>
+									<li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?= $phone_number ?></a></li>
 								</ul>
 							</div><!--//primary-info-->
 							<div class="secondary-info col-auto mt-2">
 								<ul class="resume-social list-unstyled">
-									<li class="mb-3"><a class="text-link" href="<?php echo "https://" . $linked_in ?>"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span><?php echo $linked_in ?></a></li>
-									<li class="mb-3"><a class="text-link" href="<?php echo "https://" . $github ?>"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span><?php echo $github ?></a></li>
+									<li class="mb-3"><a class="text-link" href="<?= "https://" . $linked_in ?>"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span><?= $linked_in ?></a></li>
+									<li class="mb-3"><a class="text-link" href="<?= "https://" . $github ?>"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span><?= $github ?></a></li>
 									<!-- I don't have a personal website yet... though I do have a cool domain I've been waiting to use for this purpose. (willalger.dev) -->
 									<!-- <li><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span>yourwebsite.com</a></li> -->
 								</ul>
@@ -185,7 +185,7 @@ $resume_items = [
 				<section class="resume-section summary-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
 					<div class="resume-section-content">
-						<p class="mb-0"><?php echo $summary ?></p>
+						<p class="mb-0"><?= $summary ?></p>
 					</div>
 				</section><!--//summary-section-->
 				<div class="row">
@@ -238,9 +238,9 @@ $resume_items = [
 									<ul class="list-unstyled mb-4">
 										<?php foreach ($skills as $skill) : ?>
 											<li class="mb-2">
-												<div class="resume-skill-name"><?php echo $skill[0] ?></div>
+												<div class="resume-skill-name"><?= $skill[0] ?></div>
 												<div class="progress resume-progress">
-													<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: <?php echo $skill[1] ?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: <?= $skill[1] ?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
 											</li>
 										<?php endforeach; ?>
@@ -250,7 +250,7 @@ $resume_items = [
 									<h4 class="resume-skills-cat font-weight-bold">Others</h4>
 									<ul class="list-inline">
 										<?php foreach ($skills_other as $skill) : ?>
-											<li class="list-inline-item"><span class="badge badge-light"><?php echo $skill; ?></span></li>
+											<li class="list-inline-item"><span class="badge badge-light"><?= $skill; ?></span></li>
 										<?php endforeach; ?>
 									</ul>
 								</div>
@@ -261,9 +261,9 @@ $resume_items = [
 							<div class="resume-section-content">
 								<ul class="list-unstyled">
 									<li class="mb-2">
-										<div class="resume-degree font-weight-bold"><?php echo $degree ?></div>
-										<div class="resume-degree-org"><?php echo $university ?></div>
-										<div class="resume-degree-time"><?php echo $university_timeline ?></div>
+										<div class="resume-degree font-weight-bold"><?= $degree ?></div>
+										<div class="resume-degree-org"><?= $university ?></div>
+										<div class="resume-degree-time"><?= $university_timeline ?></div>
 									</li>
 								</ul>
 							</div>
@@ -275,8 +275,8 @@ $resume_items = [
 									<?php foreach ($awards as $award) : ?>
 										<li class="mb-2 ps-4 position-relative">
 											<i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-											<div class="resume-award-name"><?php echo $award["name"]; ?></div>
-											<div class="resume-award-desc"><?php echo $award["desc"]; ?></div>
+											<div class="resume-award-name"><?= $award["name"]; ?></div>
+											<div class="resume-award-desc"><?= $award["desc"]; ?></div>
 										</li>
 									<?php endforeach; ?>
 								</ul>
@@ -288,7 +288,7 @@ $resume_items = [
 								<ul class="list-unstyled resume-lang-list">
 									<?php foreach ($languages as $language) : ?>
 										<li class="mb-2">
-											<span class="resume-lang-name font-weight-bold"><?php echo $language; ?></span>
+											<span class="resume-lang-name font-weight-bold"><?= $language; ?></span>
 										</li>
 									<?php endforeach; ?>
 								</ul>
@@ -299,7 +299,7 @@ $resume_items = [
 							<div class="resume-section-content">
 								<ul class="list-unstyled">
 									<?php foreach ($interests as $interest) : ?>
-										<li class="mb-1"><?php echo $interest; ?></li>
+										<li class="mb-1"><?= $interest; ?></li>
 									<?php endforeach; ?>
 								</ul>
 							</div>
@@ -329,7 +329,7 @@ $resume_items = [
 	</article>
 	<footer class="footer text-center pt-2 pb-5">
 		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-		<small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Your name</small>
+		<small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <?= $name ?> </small>
 	</footer>
 </body>
 
