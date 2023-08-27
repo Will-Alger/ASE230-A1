@@ -69,6 +69,7 @@ $interests = ["Running", "Cycling", "Lifting weights", "Cooking"];
 
 // projects
 $projects = array(
+	// 1
 	array(
 		"name" => "Search Engine for Full-Stack Wiki Application",
 		"desc" => "
@@ -77,6 +78,7 @@ $projects = array(
 		"img" => "assets\images\search.jpg",
 		"link" => "",
 	),
+	// 2
 	array(
 		"name" => "Linear Feedback Shift Register: Visual Tool ",
 		"desc" => "
